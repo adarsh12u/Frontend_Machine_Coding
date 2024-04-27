@@ -1,0 +1,25 @@
+.initial_div{
+  text-align: center;
+}
+.h1{
+ font-weight: 500;
+}
+.button{
+  padding: 4px;
+  /* outline: none; */
+  background-color: aqua;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.inside_div{
+     padding: 30px;
+   position: relative;
+   border: 2px solid black;
+   border-radius: 5px;
+   margin-top: 10px;
+    }
+.inside_button{
+     position: absolute;
+     top: 30px;
+     right: 30px;
+}

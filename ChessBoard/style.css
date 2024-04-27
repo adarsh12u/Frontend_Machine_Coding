@@ -1,0 +1,34 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+.div{
+      height: 100vh;
+      width: 100vw;
+       display: flex;
+      justify-content: center;
+       align-items: center;
+}
+.initial_div{
+      height: auto;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      border: 2px solid black;
+}
+.row_div{
+     
+    display: flex;
+}
+.column_div{
+     height: 70px;
+     width: 70px;
+background: aliceblue;
+}
+.color{
+    background-color: black;
+}
+.blue{
+    background-color: blueviolet;
+}

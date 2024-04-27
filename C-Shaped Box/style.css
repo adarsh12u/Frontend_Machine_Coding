@@ -1,0 +1,48 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+.initial_div{
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+}
+.main{
+  
+      height: 40vh;
+      width: 40vw;
+      
+      border-radius: 5px;
+      padding: 5px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+}
+.first_box{
+   display: flex;
+   
+   justify-content: space-between;
+}
+.second_box{
+
+    display: flex;
+    justify-content: start;
+}
+.third_box{
+
+    display: flex;
+    justify-content: space-between;
+}
+.div{
+     
+     height: 70px;
+     width: 70px;
+     border: 2px solid black;
+
+
+}
+.color{
+      background-color: blue;
+}

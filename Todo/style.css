@@ -1,0 +1,49 @@
+*{
+  box-sizing: border-box;     
+}
+
+.nav{
+    text-align: center;
+}
+.n{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    
+}
+
+.div{
+
+    display: flex;
+
+    min-height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+}
+.div1{
+     display: flex;
+     gap: 10;
+      
+     border: 2px solid black;
+     padding: 5px;
+}
+.divI{
+     height: auto;
+     width: 350px;
+   display: flex;
+   justify-content: space-between;
+}
+.input{
+   
+     padding: 5px;
+     width: 300px;
+
+}
+.divB{
+ padding:5px;
+ background: blue;
+ color: aliceblue;
+ border: 2px solid black;
+ border-radius: 5px;
+}

@@ -1,0 +1,32 @@
+*{
+     margin: 0;
+     padding: 0;
+}
+.cont{
+   padding: 5px;
+   margin-top: 5px;
+   text-align: center;
+ font-weight: 600;
+}
+.inner{
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     width: 50%;
+     height: 50%;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    width: 100%;
+}
+.content{
+    width: 100%;
+
+    
+}

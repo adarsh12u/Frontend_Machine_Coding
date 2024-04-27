@@ -1,0 +1,45 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+
+.div1{
+ text-align: center;
+}
+.div2{
+    height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.card{
+     height: 100px;
+     width: 400px;
+     border: 1px solid black;
+     border-radius: 4px;
+    display: flex;
+    
+}
+.imaged{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.img{
+     height: 70px;
+     width: 70px;
+     border-radius: 50%;
+}
+.divh{
+    padding: 3px;
+    width: 70%;
+    display: flex; 
+    flex-direction: column;     
+    justify-content: space-between;
+}
+.fir ,.sec {
+    display: flex;
+    justify-content: space-between;
+}
