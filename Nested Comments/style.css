@@ -1,0 +1,28 @@
+.container{
+  
+}
+.comment-container{
+
+}
+
+.all-comment{
+
+}
+.all-comment:not(:first-child) {
+  margin-left: 4rem;
+}
+      
+.comment-details
+ {
+  margin-left: 4rem;
+
+ }     
+  .input{
+
+  }
+  .send{
+
+  }
+  .addreply{
+
+  }

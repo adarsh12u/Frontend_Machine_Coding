@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main_Div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.card{
+    border-radius: 10px;
+    border: 3px solid black;
+    height: 350px;
+    width: 250px;
+}
+.img{
+       height: 100%;
+       width: 100%;
+       object-fit: contain;
+}
+.imagediv{
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.centerdiv{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.buttondiv{
+     width: 100%;
+    display: flex;
+  justify-content: end;
+
+}
+.star{
+    display: flex;
+    gap: 3px;
+}
+.yellow{
+     color: yellow;
+}
