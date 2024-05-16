@@ -1,34 +1,73 @@
+import React from 'react'
+import { useReducer } from 'react'
+import redurcer from './redurcer'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from 'react'
+const App = () => {
+   
+  
+  const[products , dispatch] = useReducer(redurcer ,{
+      products:[],
+      cart:[]
+  } )
+console.log(products)
 
-function App() {
-  const [count, setCount] = useState(0)
-
+  const fetchs = ()=>{
+         fetch("https://fakestoreapi.com/products").then((res)=>{
+              return res.json();         
+       }).then((res)=>{
+         dispatch({
+            type:"ADD_DATA",
+            payload:res
+         })
+       })
+       
+  }
+  useEffect(()=>{
+       fetchs();
+  },[])
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+
+
+    <div className=' firstdiv'> 
+        
+           <div className='width-poducts'>
+             <div className='carddiv'>
+                {
+                     products.products.map((val)=>{
+                       return <div className='card'>
+                                       <h1>{val.title}</h1>
+                                        <img src={val.image} className='image' alt="" />
+                                        <p>{val.description}</p>
+                         {
+
+                             products.cart.some((vals)=>vals.id === val.id) == true  ?              <button onClick={()=>dispatch({type:"REMOVE_CART",payload:val.id})}>remove to cart</button>
+                         :
+                         <button onClick={()=>dispatch({type:"ADD_CART",payload:val})}>Add to cart</button>
+                          
+                          }
+                               </div>
+                     })
+                }
+                     
+              </div>
+           </div>
+            <div className='width-Cart'>
+               {
+                      products.cart.map((val)=>{
+                        return <div className='card'>
+                        <h1>{val.title}</h1>
+                         <img src={val.image} className='image' alt="" />
+                         <p>{val.description}</p>
+                         
+                          <button onClick={()=>dispatch({type:"REMOVE_CART",payload:val})}>Remove to cart</button>
+                </div>
+
+                      })
+               }
+            </div>
+    </div>
   )
 }
 
